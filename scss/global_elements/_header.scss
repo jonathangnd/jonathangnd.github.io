@@ -1,0 +1,21 @@
+@import '../_variables.scss';
+
+header
+{
+    background-color: $default_secondary_black;
+    width: 100%;height: 25px;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5vw;
+
+    p
+    {
+        color: $default_primary_color;
+        opacity: 35%;
+        letter-spacing: 1px;
+
+        font-weight: lighter;
+        font-size: 10px;
+    }
+}
