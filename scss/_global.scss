@@ -1,0 +1,19 @@
+@import '_variables.scss';
+
+/* Import font here. */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*, ::before, ::after{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+
+    /*Default background color for not breaking eyes*/
+    color: $default_color_black;
+    font-size: $default_font_size;
+}
+body{background-color: $default_background_color;}
