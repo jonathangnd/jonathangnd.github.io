@@ -38,3 +38,7 @@ header p {
   font-weight: lighter;
   font-size: 10px;
 }
+
+#pagename::before {
+  content: "- Page";
+}

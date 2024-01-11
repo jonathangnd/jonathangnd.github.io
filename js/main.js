@@ -1,7 +1,17 @@
-var nom = window.location.pathname;
-nom = nom.split("/");
-nom = nom[nom.length - 1];
-nom = nom.substr(0, nom.lastIndexOf("."));
-nom = nom.replace(new RegExp("(%20|_|-)", "g"), "");
+function getName ()
+{
+    let n =window.location.pathname
+    n = n.split('/')
+    n = n[n.length - 1]
+    n = n.substr(0, n.lastIndexOf("."));
 
-console.log(nom);
+    switch (n) {
+        case 'index':
+            n = ' acceuil '
+            break;
+    }
+    return n;
+}
+
+const pageName = document.getElementById('pagename');
+pageName.textContent = getName()
