@@ -13,22 +13,36 @@
   font-family: "Roboto Mono", monospace;
   text-transform: uppercase;
 }
-* body, ::before body, ::after body {
-  background-color: rgb(240, 240, 240);
+
+.bg_container {
+  background-image: url("../../img/background.svg");
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 /*Default variable*/
 /*Default variable*/
 header {
-  background-color: rgb(25, 25, 25);
-  width: 100%;
-  height: 25px;
+  z-index: 999;
+  position: fixed;
+  cursor: default;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
+  height: 35px;
   padding: 5px 5vw;
 }
 header p {
@@ -39,6 +53,56 @@ header p {
   font-size: 10px;
 }
 
-#pagename::before {
-  content: "- Page";
+/*Default variable*/
+.content_wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding-left: 35em;
+  padding-right: 35em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.content_wrapper .title {
+  background-color: red;
+  position: relative;
+  top: -8em;
+}
+.content_wrapper .title h1 {
+  color: rgb(240, 240, 240);
+  font-size: 106px;
+  font-weight: 400;
+}
+.content_wrapper .title h2 {
+  position: relative;
+  top: -30px;
+  margin-left: 343px;
+  color: rgb(240, 240, 240);
+  opacity: 76%;
+  font-size: 50px;
+  font-weight: 100;
+}
+.content_wrapper .description {
+  background-color: orange;
+  position: relative;
+  top: 4em;
+  height: auto;
+  width: 850px;
+}
+.content_wrapper .description p {
+  color: rgb(240, 240, 240);
+  opacity: 26%;
+  font-size: 20px;
+  font-weight: 100;
+}
+.content_wrapper img {
+  height: auto;
+  width: 55em;
+  padding-right: 200px;
 }

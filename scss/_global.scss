@@ -12,6 +12,16 @@
     font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Mono', monospace;
     text-transform: uppercase;
+}
+.bg_container
+{
+    background-image: url('../../img/background.svg');
+    position: fixed;
+    height: 100vh;width: 100%;
+    top: 0;
+    z-index: -1;
 
-    body {background-color: $default_primary_color;}
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
