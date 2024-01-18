@@ -1,0 +1,28 @@
+@import '_variables.scss';
+
+header
+{   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3125rem 7.5rem;
+
+    font-size: 10px;
+    font-weight: 400;
+    color: $default_primary_color;
+    .pages
+    {
+        p{margin-right: 5px; opacity: 20%;}
+
+        display: flex;
+        justify-content: flex-end;
+
+        .links
+        {
+            a{color: $default_primary_color;margin: 0 0 0 10px;}opacity: 20%;
+            font-style: none;
+            gap: 0.9375rem;
+
+        }
+    }
+}
