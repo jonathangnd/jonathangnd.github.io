@@ -7,26 +7,46 @@ header
     align-items: center;
     padding: 8px 5rem;
 
-    font-size: 8px;
+    font-size: 10px;
     font-weight: 400;
     color: $default_primary_color;
-    .title{opacity: 70%;}
-    .pages
+    .title{opacity: 70%;text-transform: none;}
+    .links
     {
         display: flex;
-        
-        p{margin-right: 11px; opacity: 70%;}
-        .links
+        p{margin-right: 10px; opacity: 70%;text-transform: none;}
+
+        //Pages links part
+        nav
         {
-            display: inline-block;
             font-style: none;
+            cursor: pointer;
             a
             {
-                color: $default_primary_color;
+                position: relative;
                 padding: 4px 8px;
-                opacity: 20%;
+
+                color: $default_primary_color;opacity: 20%;
+                text-transform: none;
+                transition: opacity .2s;
+                
+                &::before
+                {
+                    position: absolute;
+                    content: '';
+                    background-color: $default_primary_color;
+                    width: 0;height: 1.5px;
+                    left: 5%;bottom: 0;top: 1.7em;
+
+                    transition: width .3s, opacity .3s;
+                }
             }
             a:hover{opacity: 70%;}
+            a:hover::before
+            {
+                opacity: 100%;
+                width: 90%;
+            }
         }
     }
 }

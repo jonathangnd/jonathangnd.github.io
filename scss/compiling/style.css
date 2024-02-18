@@ -31,29 +31,56 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 8px 5rem;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 400;
   color: rgb(240, 240, 240);
 }
 header .title {
   opacity: 70%;
+  text-transform: none;
 }
-header .pages {
+header .links {
   display: flex;
 }
-header .pages p {
-  margin-right: 11px;
+header .links p {
+  margin-right: 10px;
   opacity: 70%;
+  text-transform: none;
 }
-header .pages .links {
-  display: inline-block;
+header .links nav {
   font-style: none;
+  cursor: pointer;
 }
-header .pages .links a {
-  color: rgb(240, 240, 240);
+header .links nav a {
+  position: relative;
   padding: 4px 8px;
+  color: rgb(240, 240, 240);
   opacity: 20%;
+  text-transform: none;
+  transition: opacity 0.2s;
 }
-header .pages .links a:hover {
+header .links nav a::before {
+  position: absolute;
+  content: "";
+  background-color: rgb(240, 240, 240);
+  width: 0;
+  height: 1.5px;
+  left: 5%;
+  bottom: 0;
+  top: 1.7em;
+  transition: width 0.3s, opacity 0.3s;
+}
+header .links nav a:hover {
   opacity: 70%;
+}
+header .links nav a:hover::before {
+  opacity: 100%;
+  width: 90%;
+}
+
+/*Default variable*/
+.content_wrapper .card {
+  height: 100px;
+  width: 100px;
+  background-color: red;
 }/*# sourceMappingURL=style.css.map */

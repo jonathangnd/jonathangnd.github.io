@@ -2,7 +2,7 @@
 const pageName = document.getElementById('pagename');
 function getPageName ()
 {
-    let n =window.location.pathname;
+    let n = window.location.pathname;
     n = n.split('/');
     n = n[n.length - 1];    
     n = n.substr(0, n.lastIndexOf("."));
@@ -33,4 +33,3 @@ function changePageTitle ()
 
 //
 changePageTitle()
-pageName.textContent = getPageName();
