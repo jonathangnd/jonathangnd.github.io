@@ -12,7 +12,7 @@
   text-transform: uppercase;
 }
 
-.bg_container {
+.page_background {
   background-image: url("../../img/gradient_1.svg");
   position: fixed;
   height: 100vh;
@@ -79,8 +79,31 @@ header .links nav a:hover::before {
 }
 
 /*Default variable*/
+.content_wrapper {
+  display: flex;
+  justify-content: center;
+}
 .content_wrapper .card {
-  height: 100px;
-  width: 100px;
-  background-color: red;
+  position: absolute;
+  top: 10em;
+  height: 500px;
+  width: 1000px;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+}
+.content_wrapper .card .left_side img {
+  width: 100%;
+  height: 85%;
+}
+.content_wrapper .card_background {
+  height: 500px;
+  width: 1000px;
+  position: absolute;
+  top: 10em;
+  background-image: url("../../img/gradient_1.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transform: rotate(180deg);
 }/*# sourceMappingURL=style.css.map */
